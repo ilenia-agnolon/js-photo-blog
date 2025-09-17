@@ -25,8 +25,38 @@ axios.get(apiRef).then((response) => {
 
     //console.log(response);
 
-    const posts = response.data;
-    console.log(posts); // --> estrapolati i dati necessari
+    const pictures = response.data; //pictures è l'array di tutte le foto ricevute dall’API
+
+    //console.log(posts); // --> estrapolati i dati necessari
     
-    
+    //creo variabile di accumulo outupt (stringa)
+    let cardsHTML = "";
+
+    //utilizzo i dati
+    pictures.forEach(singlePicture => { //singlePicture è il singolo oggetto (una foto con id, title, date, url)
+        console.log( "console.log di singlePicture:",singlePicture);
+
+        //costruiamo la stringa finale aggiungendo l’HTML di ogni card
+        cardsHTML += ` 
+            <div class="col">
+
+                    <div class="card">
+
+                        <!-- puntina rossa -->
+                        <img src="img/pin.svg" alt="puntina rossa rotonda appendi immagine"
+                            class="red-pin">
+
+                        <!-- spazio img -->
+                        <img src="img/img_di_prova.jpg" alt="immagine test"
+                        class="spazio-per-immagine">
+                        
+
+                        <!-- testo -->
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                </div>
+        ` ;
+        
+    });
 })
