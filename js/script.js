@@ -53,7 +53,7 @@ axios.get(apiRef).then((response) => {
 
                         
                         <time class="date">${singlePicture.date}</time>
-                        <p class="text">${singlePicture.title}</p>
+                        <p class="text"><strong>${singlePicture.title}</strong></p>
                     </div>
 
                 </div>
