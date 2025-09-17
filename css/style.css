@@ -1,0 +1,40 @@
+/* Font utilizzati:
+
+titoli:  ‘Edu Tas Beginner’, sans-serif;d
+ate: ‘Sometype Mono’, ‘monospace’; */
+
+/*************************************************
+    GENERAL RULES CSS
+ *************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*************************************************
+    HEADER
+ *************************************************/
+header {
+    background-color: grey;
+    height: 80px;
+    text-align: center;
+    background-image: url(../img/wall.png);
+}
+
+h1 {
+    line-height: 80px;
+}
+
+
+
+
+ /*************************************************
+    MAIN
+ *************************************************/
+ main {
+    background-color: sandybrown;
+    height: 400px;
+ }
