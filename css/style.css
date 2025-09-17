@@ -64,6 +64,8 @@ h1 {
     padding-top: 14px;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .red-pin {
@@ -77,9 +79,7 @@ h1 {
 
 /* spazio img */
 .spazio-per-immagine {
-    background-color: blueviolet;
-    height: 100px;
-    width: 80%;
+   
     margin: 0 auto;
     width: 264px;
     height: 264px;
