@@ -39,7 +39,7 @@ h1 {
  main {
     background-color: sandybrown;
     background-image: url(../img/cork.png);
-    padding-top: 30px;
+    padding: 30px 0;
  }
 
  .cards-container {
@@ -54,11 +54,16 @@ h1 {
  }
 
 .col {
-    width: calc((100% / 3) - (40px / 3));
     background-color: white;
     height: 360px;
     min-width: 294px;
     display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.col:hover {
+    transform: rotate(10deg);
 }
 
 .card {
@@ -67,7 +72,10 @@ h1 {
     z-index: 1;
     display: flex;
     flex-direction: column;
+   
 }
+
+
 
 .red-pin {
     position: absolute;
@@ -80,9 +88,9 @@ h1 {
 
 /* spazio img */
 .spazio-per-immagine {
-   margin: 0 auto;
-    width: 264px;
-    height: 264px;
+   height: 264px;
+  display: block;
+  object-fit: cover;
 }
 
 /* didascalia img */
@@ -96,3 +104,22 @@ h1 {
     text-transform: uppercase;
     font-size: 20px;
 }
+
+
+
+ /*************************************************
+ *************************************************
+    RESPONSIVE
+ *************************************************
+ *************************************************/
+
+ @media screen and (max-width: 900px) {
+
+    .cards-container {
+        width: 50%;
+    }
+
+    .row {
+        justify-content: center;      
+    }
+ }
