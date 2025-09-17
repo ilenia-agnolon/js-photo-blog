@@ -1,7 +1,7 @@
 /* Font utilizzati:
 
-titoli:  ‘Edu Tas Beginner’, sans-serif;d
-ate: ‘Sometype Mono’, ‘monospace’; */
+titoli:  ‘Edu Tas Beginner’, sans-serif;
+date: ‘Sometype Mono’, ‘monospace’; */
 
 /*************************************************
     GENERAL RULES CSS
@@ -26,6 +26,8 @@ header {
 
 h1 {
     line-height: 80px;
+    font-family:Edu Tas Beginner, sans-serif;
+    font-size: 50px;
 }
 
 
@@ -36,5 +38,44 @@ h1 {
  *************************************************/
  main {
     background-color: sandybrown;
-    height: 400px;
+    height: 600px;
+    background-image: url(../img/cork.png);
+    padding-top: 30px;
  }
+
+ .cards-container {
+    width: 80%;
+    margin: 0 auto;
+ }
+
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+ }
+
+.col {
+    width: calc((100% / 3) - (20px / 3));
+    background-color: white;
+    height: 360px;
+}
+
+.card {
+    padding-top: 14px;
+}
+
+/* spazio img */
+.spazio-per-immagine {
+    background-color: blueviolet;
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    width: 264px;
+    height: 264px;
+}
+
+/* didascalia img */
+.text {
+    padding: 18px 15px;
+    font-family:Edu Tas Beginner, sans-serif;
+}
