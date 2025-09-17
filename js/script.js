@@ -14,7 +14,7 @@ ______________________________________________________________
 */
 
 //selezione degli elementi di output
-const cardsContainer = document.querySelector(".cards-container");
+const rowContainer = document.querySelector(".row");
     //console.log(cardsContainer);
 
 //salvo in una costante l’endpoint dell’API
@@ -42,21 +42,26 @@ axios.get(apiRef).then((response) => {
 
                     <div class="card">
 
-                        <!-- puntina rossa -->
+                        
                         <img src="img/pin.svg" alt="puntina rossa rotonda appendi immagine"
                             class="red-pin">
 
-                        <!-- spazio img -->
-                        <img src="img/img_di_prova.jpg" alt="immagine test"
+                        
+                        <img src="${singlePicture.url}" alt="${singlePicture.title}"
                         class="spazio-per-immagine">
                         
 
-                        <!-- testo -->
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        
+                        <time class="date">${singlePicture.date}</time>
+                        <p class="text">${singlePicture.title}</p>
                     </div>
 
                 </div>
         ` ;
         
     });
+
+    //inietto HTML dentro al contenitore
+    rowContainer.innerHTML = cardsHTML;
+
 })

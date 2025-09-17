@@ -38,7 +38,6 @@ h1 {
  *************************************************/
  main {
     background-color: sandybrown;
-    height: 600px;
     background-image: url(../img/cork.png);
     padding-top: 30px;
  }
@@ -86,7 +85,12 @@ h1 {
 }
 
 /* didascalia img */
-.text {
+.date {
     padding: 18px 15px;
+    font-family: Sometype Mono, monospace;
+}
+.text {
+    padding: 0 15px;
     font-family:Edu Tas Beginner, sans-serif;
+    text-transform: uppercase;
 }
