@@ -16,10 +16,15 @@ ______________________________________________________________
 
 PARTE 2
 
-    Milestone 2:
-    - Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
-    - Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
-    - Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
+    - Milestone 2:
+    Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
+    Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
+    Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
+
+    - Milestone 3:
+    Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
+
+______________________________________________________________
 */
 
 //selezione degli elementi di output
@@ -31,6 +36,10 @@ const overlay = document.querySelector(".main-container-overlay");
     //console.log("overlay selezionato:", overlay);
 
 const bottoneChiudi = document.querySelector(".btn-chiudi");
+
+//seleziono l'immagine grande
+const bigImage = document.querySelector(".big-img");
+
 
 
 
@@ -91,7 +100,9 @@ axios.get(apiRef).then((response) => {
             //associo un evento "click" alle card
             cards.forEach(cardSingola => {
                 cardSingola.addEventListener("click", () => {
-                    overlay.style.display = "flex"
+                    overlay.style.display = "flex";
+                    const imgCheClicchi = cardSingola.querySelector(".spazio-per-immagine")
+                    bigImage.src = imgCheClicchi.src;
                 })
               
             });
@@ -99,6 +110,8 @@ axios.get(apiRef).then((response) => {
               bottoneChiudi.addEventListener("click",() => {
                 overlay.style.display = "none"
             })
+
+            
 
 })
 

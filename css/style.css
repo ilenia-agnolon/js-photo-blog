@@ -62,7 +62,8 @@ h1 {
     min-width: 294px;
     display: block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     transition: width 2s, height 2s, background-color 2s, transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    cursor: pointer;
 }
 
 .col:hover {
