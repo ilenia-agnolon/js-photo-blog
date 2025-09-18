@@ -1,21 +1,39 @@
-/*
-______________________________________________________________
-Milestone 2:
-Utilizzando Postman, testiamo una chiamata a questo endpoint: 
+/* 
+PARTE 1
 
-https://lanciweb.github.io/demo/api/pictures/
+    - Milestone 2:
+    Utilizzando Postman, testiamo una chiamata a questo endpoint: 
 
-Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare a come poterli sfruttare.
+    https://lanciweb.github.io/demo/api/pictures/
 
+    Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare a come poterli sfruttare.
+
+
+    - Milestone 3:
+    Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
 ______________________________________________________________
-Milestone 3:
-Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
 ______________________________________________________________
+
+PARTE 2
+
+    Milestone 2:
+    - Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
+    - Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
+    - Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
 */
 
 //selezione degli elementi di output
 const rowContainer = document.querySelector(".row");
     //console.log(cardsContainer);
+
+//selezione dell'overlay e degli elementi che contiene
+const overlay = document.querySelector(".main-container-overlay");
+    //console.log("overlay selezionato:", overlay);
+
+const bottoneChiudi = document.querySelector(".btn-chiudi");
+
+
+
 
 //salvo in una costante l’endpoint dell’API
 const apiRef = "https://lanciweb.github.io/demo/api/pictures/";
@@ -64,4 +82,34 @@ axios.get(apiRef).then((response) => {
     //inietto HTML dentro al contenitore
     rowContainer.innerHTML = cardsHTML;
 
+            
+            //PARTE 2 - M1:
+            //selezione delle card
+            const cards = document.querySelectorAll (".col");
+            console.log("ecco le cards:", cards);
+
+            //associo un evento "click" alle card
+            cards.forEach(cardSingola => {
+                cardSingola.addEventListener("click", () => {
+                    overlay.style.display = "flex"
+                })
+              
+            });
+
+              bottoneChiudi.addEventListener("click",() => {
+                overlay.style.display = "none"
+            })
+
 })
+
+
+
+
+
+
+
+
+
+
+
+

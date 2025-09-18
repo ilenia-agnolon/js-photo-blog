@@ -1,4 +1,5 @@
-/* Font utilizzati:
+/* 
+Font utilizzati:
 
 titoli:  ‘Edu Tas Beginner’, sans-serif;
 date: ‘Sometype Mono’, ‘monospace’; */
@@ -36,7 +37,9 @@ h1 {
  /*************************************************
     MAIN
  *************************************************/
- main {
+ /* PICTURES */
+ 
+ .main-container {
     background-color: sandybrown;
     background-image: url(../img/cork.png);
     padding: 30px 0;
@@ -76,10 +79,9 @@ h1 {
 }
 
 
-
 .red-pin {
     position: absolute;
-    z-index: 2;
+    z-index: 1000;
     width: 28px;
     top: -8px;
     left: 50%;
@@ -103,6 +105,44 @@ h1 {
     font-family:Edu Tas Beginner, sans-serif;
     text-transform: uppercase;
     font-size: 20px;
+}
+
+
+/* PARTE PER OVERLAY */
+.main-container-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.btn-chiudi {
+    background-color: rgb(199, 199, 199);
+    padding: 6px 14px;
+    border-radius: 2px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    min-width: 120px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.spazio-img-grande {
+    width: 560px;
+    height: 560px;
+}
+
+img {
+  width: 100%;
 }
 
 
